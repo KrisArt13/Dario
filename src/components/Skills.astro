@@ -1,0 +1,211 @@
+---
+import { Image } from "astro:assets";
+import html from "/public/img/Logos/HTML.png";
+import css from "/public/img/Logos/CSS.png";
+import js from "/public/img/Logos/JS.png";
+import python from "/public/img/Logos/PYTHON.png";
+import sql from "/public/img/Logos/MYSQL.png";
+import githubb from "/public/img/Logos/GITHUB-BLANCO.png";
+import english from "/public/img/Logos/ENGLISH.png";
+import astro from "/public/img/Logos/ASTRO.png";
+---
+
+<hr class="linea" />
+<div class="skills" id="skills">
+  <div class="seccion-tit">
+    <h2>Skills</h2>
+  </div>
+  <div class="cada-skill">
+        <div class="skill1">
+        <Image src={html} alt="html"/>
+            <h2>HTML</h2>
+            <p>Intermedio</p>
+        </div>
+        <div class="skill1">
+            <Image src={css} alt="css"/>
+            <h2>CSS</h2>
+            <p>Básico</p>
+        </div>
+        <div class="skill1">
+            <Image src={js} alt="js"/>
+            <h2>JavaScript</h2>
+            <p>Básico</p>
+        </div>
+        <div class="skill1">
+            <Image src={python} alt="python"/>
+            <h2>Python</h2>
+            <p>Básico</p>
+        </div>
+        <div class="skill1">
+            <Image src={sql} alt="sql"/>
+            <h2>MySQL</h2>
+            <p>Básico</p>
+        </div>
+        <div class="skill1">
+            <Image src={githubb} alt="github"/>
+            <h2>GitHub</h2>
+            <p>Básico</p>
+        </div>
+        <div class="skill1">
+            <Image src={astro} alt="astro" />
+            <h2>Astro</h2>
+            <p>Básico</p>
+        </div>
+        <div class="skill1">
+            <Image src={english} alt="english" />
+            <h2>Inglés</h2>
+            <p>Básico - Intermedio</p>
+        </div>
+  </div>
+</div>
+<script src="/src/scripts/animaciones.js"></script>
+
+<style>
+    .linea {
+      position: relative;
+      height: 1px;
+      background-color: #15171d; /* Color azul */
+      width: 20%; /* Ancho de la línea (ajústalo según lo que necesites) */
+      border: 1;
+      border-color: #0f53c2;
+      border-radius: 40%;
+    }
+    a {
+      text-decoration: none;
+    }
+    .skills {
+      padding: 25px 23%;
+      color: #394665;
+      background: #15171d;
+      scroll-margin-top: 100px;
+      justify-content: center;
+    }
+
+    .cada-skill {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill1 {
+      padding: 20px;
+      background-color: #212225;
+      border-radius: 7px;
+      margin: 10px;
+      opacity: 0;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(20px);
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+    }
+    .skill1.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skill1 img {
+      float: left;
+      height: 50px;
+      width: 50px;
+      margin-right: 20px;
+      padding-top: 4px;
+      justify-content: center;
+      align-items: center ;
+    }
+
+    .skill1 img:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+    }
+    .skill1 h2 {
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: normal;
+      margin: 0;
+      margin-top: 10px;
+    }
+    .skill1 p {
+      font-size: 14px;
+      color: #d8d8d8;
+      margin: 0;
+    }
+
+    @media (min-width: 769px) and (max-width: 1440px) {
+      .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+      .skills{
+      padding: 25px 18%; /* Aumenta el padding de los lados */
+    }    
+    .cada-skill {
+
+    align-items: center;
+    text-align: center; 
+    justify-content: center;  
+   }
+   .skill1 img {
+      height: 50px;
+      width: 50px;
+
+    }
+    
+    .skill1 h2 {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .skill1 p {
+      font-size: 12px;
+    }
+    }
+
+
+
+      /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+    .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+    .skills {
+      padding: 15px 5%;
+      
+    }
+
+    .cada-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    text-align: center; 
+    justify-content: center;  
+   }
+
+    .skill1 {
+      width: 100%; /* Toma todo el ancho disponible */
+      max-width: 90px; /* Limita el ancho máximo para mantenerlo uniforme */
+      align-items: center;
+      justify-items: center; /* Asegura que estén centrados */
+      padding: 10px;
+      margin: 5px;
+    }
+
+    .skill1 img {
+      height: 40px;
+      width: 40px;
+      justify-content: center;
+      margin-right: 0;
+      float: none;
+    }
+
+    .skill1 h2 {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .skill1 p {
+      font-size: 12px;
+    }
+
+  }
+  </style>

@@ -1,0 +1,236 @@
+---
+
+---
+<hr class="linea">
+        <div class="sobre-mi" id="sobre-mi">
+            <div class="seccion-tit">
+                <h2>Sobre mi</h2>
+            </div>
+            <div class="yopi">
+                <div class="mi-info">
+                    <p>
+                        Soy un programador web recien empezando en el mundo del Front-end con todas las ganas
+                        de superarme y aprender todos los días.
+                    </p>
+                    <p>
+                        Me considero un apasionado por el mundo de la informática, desde
+                        temprana edad investigando y familiarizandome con la tecnología. es
+                        por eso que empecé estudiando Ingeniería de Software
+                        con I.A. Siempre en constante exploración sobre nuevos proyectos para poder adquirir más
+                        conocimiento. Me gusta aprender cosas nuevas y compartir mis
+                        enseñanzas a las personas que como yo, comenzaron en este mundo de
+                        manera autónoma.
+                    </p>
+                    <p>
+                        Actualmente tengo 21 años, resido en Los Olivos, Lima, Perú.
+                    </p>
+                </div>
+                <div class="titulos">
+                    <div class="tit1">
+                        <h2>Técnico Profesional <a href="/public/CONST-100001-v2_74165766_75283F (1).pdf" target="_blank" class="certicono">🔗</a></h2>
+                        <p>Técnico Profesional en Ingeniería de Software con I.A en SENATI</p>
+                        <p>egresado el 30/06/24 </p>
+                    </div>
+                    <div class="tit1">
+                        <h2>Estudiante Universitario</h2>
+                        <p>Estudiante Universitario en Matemática (4to Ciclo) en UNAC</p>
+                        <p>desde Julio 2023 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/src/scripts/animaciones.js"></script>
+<style>
+
+.linea {
+  position: relative;
+  height: 1px;
+  background-color: #15171d;  /* Color azul */
+  width: 20%;  /* Ancho de la línea (ajústalo según lo que necesites) */
+  border: 1;
+  border-color: #0f53c2;
+  border-radius: 40%;
+}
+.sobre-mi {
+  padding: 25px 23%;
+  color: #394665;
+  background: #15171d;
+  scroll-margin-top: 200px;
+}
+
+.yopi {
+  display: flex;
+  padding-left: 20px;
+  color: #ffffff;
+  gap: 50px;
+}
+
+.mi-info {
+  align-items: center;
+  text-align: justify;
+  width: 450px;
+}
+
+.titulos {
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  width: max-content;
+}
+
+.tit1 {
+  padding: 10px 20px;
+  background-color: #212225;
+  border-radius: 7px;
+  margin: 10px;
+  opacity: 0; 
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tit1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tit1:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tit1 h2 {
+  font-size: 18px;
+  padding-bottom: 7px;
+  font-weight: normal;
+}
+.tit1 p {
+  font-size: 14px;
+  color: #d8d8d8;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+  .sobre-mi{
+    padding: 25px 18%; /* Aumenta el padding de los lados */
+  }
+  .yopi {
+    flex-direction: column;
+    gap: 0px;
+    font-size: 0.9rem;
+    padding-left: 0px;
+  }
+
+  .mi-info {
+    width: 100%;
+    text-align: justify;
+
+  }
+  .titulos {
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  width: auto;
+}
+
+.tit1 {
+  padding: 5px 20px;
+  background-color: #212225;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  width: auto;
+  opacity: 0; 
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tit1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tit1:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tit1 h2 {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: 0;
+}
+.tit1 p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #d8d8d8;
+}
+  }
+
+
+/* Reglas para pantallas pequeñas */
+@media (max-width: 768px) {
+  .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+  .sobre-mi {
+    padding: 25px 5%;
+  }
+
+  .yopi {
+    flex-direction: column;
+    gap: 0px;
+    font-size: 0.9rem;
+    padding-left: 0px;
+  }
+
+  .mi-info {
+    width: 100%;
+    text-align: justify;
+
+  }
+  .titulos {
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  width: auto;
+}
+
+.tit1 {
+  padding: 5px 20px;
+  background-color: #212225;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  width: auto;
+  opacity: 0; 
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tit1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tit1:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tit1 h2 {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: 0;
+}
+.tit1 p {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #d8d8d8;
+}
+}
+</style>

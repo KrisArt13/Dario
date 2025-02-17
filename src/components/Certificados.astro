@@ -1,0 +1,167 @@
+---
+
+---
+
+<hr class="linea" />
+<div class="certi" id="certificados">
+  <div class="seccion-tit">
+    <h2>Certificaciones</h2>
+  </div>
+  <div class="cada-cert">
+    <div class="cert1">
+      <h2>
+        Python Básico <a
+          href="/public/0000113-2024-CERSEU-FISI_UNMSM.pdf"
+          target="_blank"
+          class="certicono">🔗</a
+        >
+      </h2>
+      <p>
+        Otorgado por la Facultad de Ingeniería de Sistemas e Informática de la
+        UNMSM.
+      </p>
+      <p>27/02/24</p>
+    </div>
+    <div class="cert1">
+      <h2>
+        Programming Essentials in Python <a
+          href="/public/DARIO FRANCISCORODRIGUEZ QUISPE-PY-PP55-202110-certificate.pdf"
+          target="_blank"
+          class="certicono">🔗</a
+        >
+      </h2>
+      <p>Otorgado por Python Institute Authorized Academy Program.</p>
+      <p>15/07/21</p>
+    </div>
+    <div class="cert1">
+      <h2>
+        Entrepreneurship <a
+          href="/public/DARIO FRANCISCORODRIGUEZ QUISPE-EMP-PP55-202110-certificate.pdf"
+          target="_blank"
+          class="certicono">🔗</a
+        >
+      </h2>
+      <p>Otorgado por Cisco Networking Academy en SENATI.</p>
+      <p>26/05/21</p>
+    </div>
+    <div class="cert1">
+      <h2>
+        Get Connected <a
+          href="/public/DARIO FRANCISCORODRIGUEZ QUISPE-GC-PP55-202110-certificate.pdf"
+          target="_blank"
+          class="certicono">🔗</a
+        >
+      </h2>
+      <p>Otorgado por Cisco Networking Academy en SENATI.</p>
+      <p>12/05/21</p>
+    </div>
+  </div>
+</div>
+<script src="/src/scripts/animaciones.js"></script>
+
+<style>
+  .linea {
+    position: relative;
+    height: 1px;
+    background-color: #15171d;
+    width: 20%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    border: 1;
+    border-color: #0f53c2;
+    border-radius: 40%;
+  }
+  a {
+    text-decoration: none;
+  }
+  .certi {
+    padding: 25px 23%;
+    color: #394665;
+    background: #15171d;
+    scroll-margin-top: 200px;
+    justify-content: center;
+  }
+
+  .cada-cert {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  .cert1 {
+    padding: 10px 20px;
+    background-color: #212225;
+    border-radius: 7px;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+  .cert1.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cert1 h2 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: normal;
+  }
+  .cert1 p {
+    font-size: 14px;
+    color: #d8d8d8;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+  .certi{
+    padding: 25px 18%; /* Aumenta el padding de los lados */
+  }
+  .cada-cert {
+      grid-template-columns: 1fr;
+    }
+    .cert1 h2 {
+      font-size: 15px;
+      font-size: 15px;
+      font-weight: normal;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .cert1 p {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 768px) {
+    .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+    .certi {
+      padding: 20px 5%;
+    }
+    .cada-cert {
+      grid-template-columns: 1fr;
+    }
+    .cert1 h2 {
+      font-size: 15px;
+      font-size: 15px;
+      font-weight: normal;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .cert1 p {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+</style>

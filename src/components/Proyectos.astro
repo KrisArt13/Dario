@@ -1,0 +1,228 @@
+---
+import { Image } from "astro:assets";
+import multistore from "/public/img/multistore.jpg";
+import html from "/public/img/Logos/HTML.png";
+import css from "/public/img/Logos/CSS.png";
+import js from "/public/img/Logos/JS.png";
+import githubb from "/public/img/Logos/GITHUB-BLANCO.png";
+import astro from "/public/img/Logos/ASTRO.png";
+import miportafolio from "/public/img/MiPortafolio.png";
+---
+<hr class="linea">
+
+<div class="proyects" id="proyectos">
+    <div class="seccion-tit">
+        <h2>Proyectos</h2>
+    </div>
+    <div class="proy1" >
+        <div class="card1">
+            <h1>MultiStore - Catálogo Web</h1>
+            <p>Este fue mi primer proyecto.</p>
+            <p>Realizado en el 2do semestre en SENATI.
+                Esta pagina web, fue para una tienda cercana a mi casa, la cual quería un catálogo que mostrara
+                sus productos con el fin de que sea una tienda mas conocida y aumenten sus ventas.
+            </p>
+            <div class="herr">
+                <Image src={html} alt="html" class="img"/>
+                <Image src={css} alt="css" class="img"/>
+                <Image src={js} alt="js" class="img"/>
+                <a href="https://github.com/DarioRodro/dariorodro30" target="_blank">
+                <Image src={githubb} alt="github"/>
+                </a>
+            </div>
+        </div>
+        <div class="card2">
+            <a href="https://dariorodro.github.io/miportafolio/" target="_blank">
+                <Image src={multistore} alt="MultiStore" />
+            </a>
+        </div>
+    </div>
+    <div class="proy1" >
+        <div class="card1">
+            <h1>Mi Portafolio</h1>
+            <p>Presentación</p>
+            <p>Realizado como presentación de mi portafolio personal, 
+                con el fin de mostrar mis habilidades, trayectoria y proyectos realizados.
+            </p>
+            <div class="herr">
+                <Image src={html} alt="html" class="img"/>
+                <Image src={css} alt="css" class="img"/>
+                <Image src={js} alt="js" class="img"/>
+                <a href="https://github.com/DarioRodro/dariorodro30" target="_blank">
+                <Image src={githubb} alt="github"/>
+                </a>
+                <Image src={astro} alt="astro" class="astro"/>
+
+            </div>
+        </div>
+        <div class="card2">
+            <a href="https://dariorodro.github.io/dariorodro30/" target="_blank">
+                <Image src={miportafolio} alt="Miportafolio" />
+            </a>
+        </div>
+    </div>
+</div>
+<script src="/src/scripts/animaciones.js"></script>
+
+<style>
+
+.linea {
+    position: relative;
+    height: 1px;
+    background-color: #000000;  /* Color azul */
+    width: 20%;  /* Ancho de la línea (ajústalo según lo que necesites) */
+    border: 1;
+    border-color: #0f53c2;
+    border-radius: 40%;
+}
+.proyects {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 23%;
+  color: #394665;
+  background: #15171d;
+  scroll-margin-top: 200px;
+}
+.proy1 {
+    display: flex;
+    box-sizing: border-box;
+    padding: 2px;
+    padding-bottom: 50px;
+    height: 100%;
+    max-width: 1000px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+@media (min-width: 768px) {
+  .proy1 {
+    flex-direction: row;
+  }
+}
+
+.card1 {
+  width: 680px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card1 h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: normal;
+} 
+.card1 p {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.card1 b {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.herr {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  gap: 30px;
+}
+.herr img {
+  width: 40px;
+  height: auto;
+}
+.card2 {
+  width: 700px;
+  border-radius: 16px;
+  padding: 10px;
+}
+.card2 img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0f54c252;
+  animation: bounce 1.5s infinite alternate;
+  border-radius: 8px;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1440px) { 
+    .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+  .proyects{
+    padding: 25px 18%; /* Aumenta el padding de los lados */
+  }
+  .proy1 {
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+  .card1, .card2 {
+    width: 100%;
+  }
+  .card1 h1 {
+    font-size: 1.2rem;
+  }
+  .card1 p {
+    font-size: 0.9rem;
+  }
+  .card2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .herr {
+    justify-content: center;
+
+  }
+  .herr img {
+  width: 30px;
+  height: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .linea {
+      width: 50%; /* Ancho de la línea (ajústalo según lo que necesites) */
+    }
+  .proyects {
+    padding: 25px 5%;
+  }
+  .proy1 {
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+  .card1, .card2 {
+    width: 100%;
+  }
+  .card1 h1 {
+    font-size: 1.2rem;
+  }
+  .card1 p {
+    font-size: 0.9rem;
+  }
+  .card2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .herr {
+    justify-content: center;
+
+  }
+  .herr img {
+  width: 30px;
+  height: auto;
+}
+}
+</style>
